@@ -1,0 +1,6 @@
+[deps]
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+LabView0mqJlExamples = "72c83712-8c09-478a-b33c-5657d0ca3e27"
+
+[compat]
+Documenter = "~0.24"

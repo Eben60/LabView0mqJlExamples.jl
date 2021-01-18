@@ -1,0 +1,17 @@
+name = "LabView0mqJlExamples"
+uuid = "72c83712-8c09-478a-b33c-5657d0ca3e27"
+authors = ["Eben60"]
+version = "0.1.0"
+
+[deps]
+LabView0mqJl = "5183b3a5-06a0-41b4-b5e5-84b1becd192f"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
+
+[compat]
+julia = "1.5"
+LabView0mqJl = "0.1"
