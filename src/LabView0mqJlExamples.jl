@@ -10,3 +10,5 @@ export show_img, myf1, myf2, myf3, test_bin2nums,numarr_loopback, numarrs_lpbk, 
 
 # from simple_examples
 export arr_amplitude, arr_length, arr_mean, arr_median
+
+end
