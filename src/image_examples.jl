@@ -13,6 +13,5 @@ end
 function send_testimage(;img_name)
     img = testimage(img_name)
     img_type = string(typeof(img))
-    @show img_type
     return (;img_type, bigarrs=(;img))
 end
