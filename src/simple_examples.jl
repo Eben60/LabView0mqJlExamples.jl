@@ -1,5 +1,3 @@
-using Statistics
-
 function trim_arr(arr; trim_at_begin, trim_at_end)
     if (trim_at_begin + trim_at_end) > 1
         error("you are trying to remove more than you have")
