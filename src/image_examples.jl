@@ -1,8 +1,6 @@
 using TestImages
 
-function is2d_img(s)
-    ! (occursin("_3d_", lowercase(s)) || occursin("series", lowercase(s)) || occursin("stack", lowercase(s)))
-end
+is2d_img(s) = ! any(occursin.(["_3d_", "series","stack"], lowercase(s)))
 
 function get2d_images()
     rf = TestImages.remotefiles

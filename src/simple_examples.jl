@@ -34,3 +34,18 @@ function arr_std(;testarr, trim_at_begin=0, trim_at_end=0)
     ar = trim_arr(testarr; trim_at_begin, trim_at_end)
     return (;y=std(ar))
 end
+
+function vec_amplify(;testarr, trim_at_begin=0, trim_at_end=0, p=1)
+    vec = trim_arr(testarr; trim_at_begin, trim_at_end).*p
+    return (;bigarrs=(;vec))
+end
+
+function vec_attenuate(;testarr, trim_at_begin=0, trim_at_end=0, p=1)
+    vec = trim_arr(testarr; trim_at_begin, trim_at_end)./p
+    return (;bigarrs=(;vec))
+end
+
+function vec_power(;testarr, trim_at_begin=0, trim_at_end=0, p=1)
+    vec = abs.(trim_arr(testarr; trim_at_begin, trim_at_end)).^p
+    return (;bigarrs=(;vec))
+end
