@@ -10,6 +10,8 @@ function trim_arr(arr; trim_at_begin, trim_at_end)
     return arr[begin+trim_b:end-trim_e]
 end
 
+rms(ar) = sqrt(mean(ar.^2))
+
 function arr_amplitude(;testarr, trim_at_begin=0, trim_at_end=0)
     ar = trim_arr(testarr; trim_at_begin, trim_at_end)
     return (;y=(maximum(ar)-minimum(ar)))
@@ -35,17 +37,22 @@ function arr_std(;testarr, trim_at_begin=0, trim_at_end=0)
     return (;y=std(ar))
 end
 
+function arr_rms(;testarr, trim_at_begin=0, trim_at_end=0)
+    ar = trim_arr(testarr; trim_at_begin, trim_at_end)
+    return (;y=rms(ar))
+end
+
 function vec_amplify(;testarr, trim_at_begin=0, trim_at_end=0, p=1)
     vec = trim_arr(testarr; trim_at_begin, trim_at_end).*p
-    return (;bigarrs=(;vec))
+    return (;y=rms(vec), bigarrs=(;vec))
 end
 
 function vec_attenuate(;testarr, trim_at_begin=0, trim_at_end=0, p=1)
     vec = trim_arr(testarr; trim_at_begin, trim_at_end)./p
-    return (;bigarrs=(;vec))
+    return (;y=rms(vec), bigarrs=(;vec))
 end
 
 function vec_power(;testarr, trim_at_begin=0, trim_at_end=0, p=1)
     vec = abs.(trim_arr(testarr; trim_at_begin, trim_at_end)).^p
-    return (;bigarrs=(;vec))
+    return (;y=rms(vec), bigarrs=(;vec))
 end
