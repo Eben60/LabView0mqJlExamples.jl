@@ -12,6 +12,8 @@ end
 
 rms(ar) = sqrt(mean(ar.^2))
 
+######
+
 function arr_amplitude(;testarr, trim_at_begin=0, trim_at_end=0)
     ar = trim_arr(testarr; trim_at_begin, trim_at_end)
     return (;y=(maximum(ar)-minimum(ar)))
