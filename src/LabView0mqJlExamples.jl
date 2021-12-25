@@ -2,8 +2,8 @@ module LabView0mqJlExamples
 
 # using LabView0mqJl
 using JSON3
-using Colors, TestImages, ImageIO, ImageShow, FileIO
-using Statistics
+using Colors, TestImages, ImageIO, ImageShow, FileIO, ImageMagick
+using Statistics, LinearAlgebra
 include("./user_functions.jl")
 include("./simple_examples.jl")
 include("./image_examples.jl")
